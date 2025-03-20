@@ -12,7 +12,8 @@ function App() {
     e.preventDefault();
 
     if (!number) {
-      console.log("Please enter a number");
+      alert("Please enter bus number");
+      return;
     }
 
     const qrcode = `http://rebrand.ly/tummoc?tummoc_qr=BMTC BUS ${formatString(
@@ -25,8 +26,8 @@ function App() {
     <section className="flex items-center justify-center min-h-[100vh]">
       <section className="width flex flex-col gap-10 ">
         <form
-          className="w-[50%] mx-auto flex justify-between"
-          onClick={handleSubmit}
+          className="w-[100%] sm:w-[50%] mx-auto flex flex-col items-center justify-center  sm:justify-between sm:flex-row gap-10 sm:g-0 "
+          onSubmit={handleSubmit}
         >
           <input
             type="text"
@@ -39,7 +40,7 @@ function App() {
           <input
             type="submit"
             value={"Submit"}
-            className="w-[20%] bg-amber-950 text-white"
+            className="py-3  w-[30%] bg-amber-950 text-white"
           />
         </form>
 
