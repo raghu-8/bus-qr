@@ -2,10 +2,10 @@ import "./app.css";
 import { useState } from "react";
 import QRCode from "react-qr-code";
 function App() {
-  const [number, setNumber] = useState(0);
-  const [qrCode, setQrCode] = useState(null);
+  const [number, setNumber] = useState<string>("");
+  const [qrCode, setQrCode] = useState<string | null>(null);
 
-  function formatString(str) {
+  function formatString(str: string) {
     return str.toUpperCase().replace(/\s+/g, "");
   }
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -18,8 +18,6 @@ function App() {
     const qrcode = `http://rebrand.ly/tummoc?tummoc_qr=BMTC BUS ${formatString(
       number
     )}Bangalore&ref=tummoc_india`;
-    console.log(formatString(number));
-    console.log(qrcode);
 
     setQrCode(qrcode);
   }
