@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #fbed22;
+
+  --bg: #f9f8fb;
+
+  --max-width: 1400px;
+
+  --dark-bg: #000;
+  --light-bg: #1d1d1d;
+  --black: #000;
+  --white: #fff;
+
+  --border: #4a4a4a;
+  --title-color: #b5b5b5;
+  --title-light: #4a4a4a;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+.max-width {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+.width {
+  width: 95%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: 100%;
+}
+
+.fullHeight {
+  @apply min-h-[100vh];
+}
+
+@media (max-width: 650px) {
+  .mobile_full_width {
+    width: 100% !important;
+  }
+}
