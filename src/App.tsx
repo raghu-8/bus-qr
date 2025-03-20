@@ -25,6 +25,9 @@ function App() {
   return (
     <section className="flex items-center justify-center min-h-[100vh]">
       <section className="width flex flex-col gap-10 ">
+        <h1 className="text-center text-2xl font-bold text-amber-950">
+          Bus Number QR Code Generator for Tummoc App
+        </h1>
         <form
           className="w-[100%] sm:w-[50%] mx-auto flex flex-col items-center justify-center  sm:justify-between sm:flex-row gap-10 sm:g-0 "
           onSubmit={handleSubmit}
